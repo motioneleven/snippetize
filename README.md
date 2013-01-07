@@ -1,6 +1,6 @@
 # Snippetize
 
-TODO: Write a gem description
+Snippetize allows you to include re-usable code and partials in html or plain text fields. Stay dry and reuse your partials using shortcode. Use it for including forms, videos, maps or simply preformated html snippets.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+{googlemap address=your_address_goes_here}
 
 ## Contributing
 

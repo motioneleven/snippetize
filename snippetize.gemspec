@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["mathieu@motioneleven.com"]
   gem.description   = %q{Snippetize allows you to include re-usable code and partials in html or plain text fields.}
   gem.summary       = %q{Snippetize allows you to include re-usable code and partials in html or plain text fields. Stay dry and reuse your partials using shortcode. Use it for including forms, videos, maps or simply preformated html snippets.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/motioneleven/snippetize"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
