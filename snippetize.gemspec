@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Snippetize::VERSION
   gem.authors       = ["Mathieu Gagné"]
   gem.email         = ["mathieu@motioneleven.com"]
-  gem.description   = %q{Snippetize allows you to include re-usable code and partials in html or plain text fields.}
-  gem.summary       = %q{Snippetize allows you to include re-usable code and partials in html or plain text fields. Stay dry and reuse your partials using shortcode. Use it for including forms, videos, maps or simply preformated html snippets.}
+  gem.description   = %q{Ruby gem allowing you to include re-usable code and partials in html or plain text fields.}
+  gem.summary       = %q{Ruby gem allowing you to include re-usable code and partials in html or plain text fields. Stay dry and reuse your partials using shortcode. Use it for including forms, videos, maps or simply preformated html snippets.}
   gem.homepage      = "https://github.com/motioneleven/snippetize"
 
   gem.files         = `git ls-files`.split($/)
