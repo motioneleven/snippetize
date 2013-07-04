@@ -15,4 +15,10 @@ describe Snippetize::ActionViewExtensions::SnippetizeHelper do
 		@view.should_receive(:render).with({partial: "snippets/test", locals: {}})
 		@view.snippetize("one two {{test}} three")
 	end
+
+	it "should render multiple partials" do
+		@view.should_receive(:render).twice
+		@view.snippetize("one two {{test}} three {{test2}}")
+	end
+
 end
