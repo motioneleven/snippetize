@@ -11,5 +11,7 @@ module ActionView
 	end
 end
 require 'active_support/core_ext/module/attribute_accessors'
+require 'active_support/core_ext/hash'
+require 'rack/utils'
 
 require_relative '../lib/snippetize.rb'

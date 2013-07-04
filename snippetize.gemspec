@@ -19,4 +19,5 @@ Gem::Specification.new do |gem|
 
 	gem.add_development_dependency 'rspec'
 	gem.add_development_dependency 'active_support'
+	gem.add_development_dependency 'rack'
 end
