@@ -1,0 +1,18 @@
+require 'spec_helper'
+include Snippetize::ActionViewExtensions::SnippetizeHelper
+
+describe Snippetize::ActionViewExtensions::SnippetizeHelper do
+	before :each do
+		@view = ActionView::Base.new
+		@view.stub :render
+	end
+
+	it "should treat nil as an empty string" do
+		snippetize().should eq("")
+	end
+
+	it "should render the corresponding partial" do
+		@view.should_receive(:render).with({partial: "snippets/test", locals: {}})
+		@view.snippetize("one two {{test}} three")
+	end
+end
