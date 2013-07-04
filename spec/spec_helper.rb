@@ -10,5 +10,6 @@ module ActionView
 	class Base
 	end
 end
+require 'active_support/core_ext/module/attribute_accessors'
 
 require_relative '../lib/snippetize.rb'
