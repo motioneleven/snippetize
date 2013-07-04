@@ -6,12 +6,10 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
-module ActionView
-	class Base
-	end
-end
-require 'active_support/core_ext/module/attribute_accessors'
+require 'active_support/core_ext/module'
+require 'active_support/core_ext/class'
 require 'active_support/core_ext/hash'
+require 'action_view'
 require 'rack/utils'
 
 require_relative '../lib/snippetize.rb'
