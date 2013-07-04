@@ -21,4 +21,8 @@ describe Snippetize::ActionViewExtensions::SnippetizeHelper do
 		@view.snippetize("one two {{test}} three {{test2}}")
 	end
 
+	it "should pass the local variables" do
+		@view.should_receive(:render).with({partial: "snippets/test", locals: {count: "2", tag: "test"}})
+		@view.snippetize("one two {{test, count: 2, tag: test}} three")
+	end
 end
