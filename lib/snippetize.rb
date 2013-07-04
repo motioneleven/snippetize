@@ -7,9 +7,6 @@ module Snippetize
   mattr_accessor :location
   @@location = 'snippets'
 
-  mattr_accessor :templating_engine
-  @@templating_engine = 'erb'
-
   def self.setup
     yield self
   end
