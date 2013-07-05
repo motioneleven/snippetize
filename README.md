@@ -1,14 +1,20 @@
 # Snippetize
 
-Snippetize allows you to include re-usable code and partials in html or plain text fields. Stay dry and reuse your partials using shortcode. Use it for including forms, videos, maps or simply preformated html snippets.
+Snippetize allows you to include partials in html or plain text fields. Stay dry and reuse your partials using shortcode. Use it for including forms, videos, maps or simply preformated html snippets.
 
 ## Why
 
-If you want dynamic partials to be displayed and you save your html output to a, let's say, a content column of a Article instance.
+If you want users to be able to add partials without editing html.
 
+So this:
+```ruby
     Article.new(content: "<div class='widget'>I need my awesome widget that displays everywhere on the site.</div>")
+```
 
-Or sometimes you want a form and want to keep the authentication token for instance or any ruby code that has to stay dynamic and can't be kept static in the database.
+Becomes:
+```ruby
+    Article.new(content: "{{widget}}")
+```
 
 ## Installation
 
@@ -44,10 +50,15 @@ The result could look like this:
 
     "<div class='widget'><div class='my-awesome-widget'>This lives in my partial.</div></div>"
 
+You can also pass variables to you partial like you would normaly to a partial
+
+    text = "<div class='widget'>{{awesome_widget, count: 2, category: test}}</div>"
+
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+3. Test your changes (`rspec spec`)
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
